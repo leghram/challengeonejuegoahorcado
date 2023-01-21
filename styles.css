@@ -1,5 +1,262 @@
+:root {
+  --var-blue: #052051;
+  --var-gray: #ced4da;
+  --var-blue-back: #e9ecf8;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(242, 246, 255);
+}
+
+#logo {
+  color: var(--var-blue);
+  font-size: 7rem;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  font-weight: 700;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones-container {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  width: 15%;
+}
+
+#iniciarJuego,
+#agregarPalabra {
+  margin: 2rem 0;
+  border: none;
+  font-size: 1rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+#iniciarJuego {
+  background-color: var(--var-blue);
+  color: white;
+}
+#agregarPalabra {
+  color: var(--var-blue);
+  background-color: var(--var-gray);
+}
+
+/* EN PANTALLTA */
+#juego-init {
+  width: 90%;
+  height: 100%;
+}
+
+#game-space {
+  height: 75%;
+  position: relative;
+}
+
+#botones-game {
+  display: flex;
+  width: 50%;
+  height: 25%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#botones-game button {
+  font-size: 1rem;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+#new-game {
+  background-color: var(--var-blue);
+  color: white;
+}
+
+#desistir {
+  background-color: var(--var-gray);
+  color: var(--var-blue);
+}
+
+#ahorcado-space {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ahorcado-base {
+  height: 80%;
+  width: 15rem;
+  border-bottom: solid 4px var(--var-blue);
+  position: relative;
+}
+.partes-ahorcado {
+  position: absolute;
+}
+
+#fallido1 {
+  background-color: var(--var-blue);
+  height: 100%;
+  width: 5px;
+  left: 3rem;
+}
+#fallido2 {
+  background-color: var(--var-blue);
+  height: 5px;
+  width: 7rem;
+  top: 0;
+  left: 3rem;
+}
+#fallido3 {
+  background-color: var(--var-blue);
+  height: 5rem;
+  width: 5px;
+  top: 0;
+  left: 10rem;
+}
+#fallido4 {
+  border: solid var(--var-blue) 5px;
+  height: 5rem;
+  width: 5rem;
+  top: 5rem;
+  left: 8rem;
+  border-radius: 50%;
+}
+#fallido5 {
+  height: 10rem;
+  width: 5rem;
+  top: 10rem;
+  left: 8rem;
+  background-image: url("./assets/body.JPG");
+  background-position: center;
+  background-size: cover;
+}
+
+#message-game {
+  width: 15rem;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.red-color {
+  color: red;
+}
+.green-color {
+  color: rgb(22, 207, 18);
+}
+
+#inputs-letras-completadas {
+  height: 20%;
+  position: relative;
+}
+
+#space-inputs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#letras-completadas {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+input {
+  display: block;
+  width: 2rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0;
+  margin: 0 2rem;
+  text-align: center;
+  border-bottom: solid var(--var-blue) 8px;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+.span-info {
+  display: inline-block;
+  background-color: var(--var-blue);
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+
+.add-new-word-area {
+  width: 80%;
+  margin: auto;
+
+  height: 100%;
+}
+.space--input-add-word {
+  width: 80%;
+
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 70%;
+}
+.space--input-add-word input {
+  border: none;
+  width: auto;
+  margin: auto;
+  font-size: 2rem;
+  height: 2rem;
+  margin-top: 10rem;
+}
+
+.botones-add-word {
+  width: 50%;
+  margin: auto;
+}
+.botones-add-new-word {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botones-add-new-word button {
+  width: 12rem;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+.botones-add-new-word :first-child {
+  background-color: var(--var-blue);
+  color: white;
+}
+.botones-add-new-word :last-child {
+  background-color: var(--var-gray);
+  columns: var(--var-blue);
 }
